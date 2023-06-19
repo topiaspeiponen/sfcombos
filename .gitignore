@@ -18,7 +18,6 @@
 # misc
 .DS_Store
 *.pem
-git_deploy_key
 
 # debug
 npm-debug.log*
