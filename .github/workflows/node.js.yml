@@ -31,5 +31,6 @@ jobs:
     - run: npm test
     - name: Semantic Release
       uses: cycjimmy/semantic-release-action@v3
+      branch: main
       env:
         GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE }}
