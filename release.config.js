@@ -9,7 +9,6 @@ const config = {
     ],
     '@semantic-release/release-notes-generator',
     ["@semantic-release/git", {
-      "assets": [false],
       "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }],
     '@semantic-release/github'
