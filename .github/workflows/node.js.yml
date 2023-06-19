@@ -19,6 +19,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -27,15 +29,8 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-  semantic_version:
-    runs-on: ubuntu-22.04
-
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
     - name: Git Semantic Version
-    - uses: PaulHatch/semantic-version@v5.0.3
+      uses: PaulHatch/semantic-version@v5.0.3
       with:
         # The prefix to use to identify tags
         tag_prefix: "v"
