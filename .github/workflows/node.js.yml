@@ -6,6 +6,7 @@ name: Build, test and release
 on:
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
