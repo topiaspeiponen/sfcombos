@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -8,10 +9,18 @@ export default function Header() {
         <h1 className="text-lg">
          SFCombos 
         </h1>
-        <div className="flex gap-4 ml-auto">
+        <div className="flex gap-8 ml-auto items-center">
           <Link href="/">Home</Link>
           <Link href="/">Combos by character</Link>
-          <Link href="/">Login</Link>
+          <div className="flex gap-2 items-center">
+            <Image
+              src="/icons/login_white_48x48.png"
+              width={20}
+              height={20}
+              style={{objectFit: "contain"}}
+              alt="Login" />
+            <Link href="/">Login</Link>
+          </div>
         </div>
       </div>
     </header>
