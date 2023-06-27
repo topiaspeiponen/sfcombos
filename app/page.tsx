@@ -48,7 +48,7 @@ const dummyCardData = [
 export default function Page() {
   return (
     <PageLayout>
-      <div>This is an empty frontpage using the PageLayout layout</div>
+      <div>This is an empty frontpage using the PageLayout layout. Testing!</div>
       <div className='grid gap-4 grid-cols-3 grid-rows-1'>
         {dummyCardData.map((cardData) => {
           return (
